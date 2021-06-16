@@ -1,10 +1,4 @@
 # K Nearest Neighbours
-K-Nearest Neighbor( kNN) is a non- parametric algorithm which is used for classification as
-well as density estimation. Since kNN is non-parametric, it can perform density estimation
-for arbitrary distributions and unlike other parametric methods, here no knowledge of
-distribution is required beforehand. Also, there is no explicit training phase in this
-algorithmand all the training data is needed during the testing phase. If the data size is huge,it
-becomes computationally expensive.
-The aim is to find the k closest neighbours of a test sample in terms of distance between them
-in the feature space and increase the volume centered on the sample till it accommodates all
-the ki nearest neighbours.
+KNN is a non-parametric and it can perform density estimation for arbitrary distributions and unlike other parametric methods, here no knowledge of distribution is required beforehand. Also, there is no explicit training phase in this algorithm and all the training data is needed during the testing phase. If the data size is huge, it becomes computationally expensive. The aim is to find the k closest neighbours of a test sample in terms of distance between them in the feature space and increase the volume centered on the sample till it accommodates all the k nearest neighbours.
+
+In this experiment we first calculated the DTW distances between test utterance and each speech utterances using their 39 dimensional MFCC vectors. Using these distance measures we applied K Nearest Neighbors classifier for classification of given speech utterance. We repeated the experiment for different number of K. We got maximum accuracy of 59% for K=16. When we further increased the K to 32, the accuracy reduced slightly. Since the given three utterances are very similar, the distance between them is also very less. Also because of this similarity, there are cases were the inter class distance in more than intra class distance. Hence the KNN classifier accuracy is not more than 60% for the given speech data. We also performed an experiment by considering utterances /me/, /pai/ and /ta/. We got much better accuracies in all cases compared to our data having similar utterances. For example, we got accuracy of 73% with K=32.
