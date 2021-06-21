@@ -1,2 +1,2 @@
-# K Nearest Neighbours
+### K Nearest Neighbours
 KNN is a non-parametric and it can perform density estimation for arbitrary distributions and unlike other parametric methods, here no knowledge of distribution is required beforehand. Also, there is no explicit training phase in this algorithm and all the training data is needed during the testing phase. If the data size is huge, it becomes computationally expensive. The aim is to find the k closest neighbours of a test sample in terms of distance between them in the feature space and increase the volume centered on the sample till it accommodates all the k nearest neighbours.
